@@ -58,12 +58,13 @@
     "typescript": "^1.7.5"
   },
   "jspm": {
-    "registry": "npm",
-    "jspmPackage": true,
+    "registry": "jspm",
     "main": "index",
-    "format": "amd",
     "directories": {
-      "dist": "dist/amd"
+      "lib": "dist"
+    },
+    "dependencies": {
+      "aurelia-framework": "^1.0.7"
     },
     "peerDependencies": {},
     "devDependencies": {
