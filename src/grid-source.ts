@@ -82,7 +82,8 @@ export class GridDataSource implements IGridDataSource {
 			this.pageSize = 10;
 
 		// process page sizes
-		if (this.grid.sourceAutoLoad) {
+		// Aurelia cannot bind to booleans currently so need to check string value
+		if (this.grid.sourceAutoLoad && this.grid.sourceAutoLoad.toString() == "true") {
 			this.refresh();
 		}
 	}
