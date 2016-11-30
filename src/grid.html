@@ -1,17 +1,13 @@
 <template>
 	<require from="./aurelia-grid.css"></require>
 	<div class="aurelia-grid grid-container">
-		<table class="table table-hover table-striped table-responsive grid-header-table">
-			<thead>
-				<tr class="grid-headings">
-				</tr>
-			</thead>
-		</table>
-
 		<!-- Content table -->
 		<div class="grid-content-container">
-			<table class="table table-hover table-striped table-responsive selectable" show.bind="!noDataMessage || (noDataMessage && source.count > 0)">
-				<tbody>
+			<table class="table table-hover table-striped table-responsive selectable grid-header-table">
+                <thead>
+                    <tr class="grid-headings"></tr>
+                </thead>
+                <tbody show.bind="!noDataMessage || (noDataMessage && source.count > 0)">
 					<tr click.delegate="$grid.selection.select($item, $event)">
 					</tr>
 				</tbody>
